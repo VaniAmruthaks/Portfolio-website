@@ -4,6 +4,8 @@ function Skill(){
         "CSS",
         "Javascript",
         "React",
+        "Node.js",
+        "Mongodb",
         "Git",
         "GitHub"
     ];
