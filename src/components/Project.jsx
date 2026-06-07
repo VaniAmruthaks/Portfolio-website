@@ -4,17 +4,37 @@ function Project(){
         {
             title:"Personal Finance Tracker",
             description:"A React application for tracking income and expenses with dashboards, charts and financial summaries.",
-            tech:"React ,Javascipt ,Css"
+            features: [
+            "Income tracking",
+            "Expense tracking",
+            "Category management",
+            "Dashboard summaries",
+            "Charts and visualisation",
+            "Search functionality"
+        ],
+            tech:"React ,JavaScipt ,CSS"
         },
         {
             title:"Todo Application",
             description: "A task management application with task creation, editing, deletion and filtering.",
-            tech:"React ,Javascipt ,Css"
+            features: [
+            "Add tasks",
+            "Edit tasks",
+            "Delete tasks",
+            "Complete tasks",
+            "Filter tasks"
+            ],
+            tech:"React ,JavaScipt ,CSS"
         },
         {
             title:"Integrated Communication system",
             description:"An MSc Computing dissertation project designed to improve communication between students and academic users.",
-            tech:"React ,Node.js ,Mongodb ,Tailwind"
+            features: [
+            "Student communication",
+            "Academic interaction",
+            "User management"
+             ],
+            tech:"React ,Node.js ,MongoDb ,CSS"
         }
 
     ];
@@ -28,8 +48,15 @@ function Project(){
                  key={project.title}>
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
-                    <strong>Tech Stack</strong>
-                    <p>{project.tech}</p>
+                    
+                    <strong>Features</strong>
+                    <ul>
+                       {project.features.map((feature)=>(
+                        <li key={feature}>
+                          {feature}
+                        </li>
+                       ))} 
+                    </ul>
                     </div>
             ))}
             </div>
