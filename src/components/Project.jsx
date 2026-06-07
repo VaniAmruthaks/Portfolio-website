@@ -1,8 +1,12 @@
+import financeImg from "../assets/finance.png";
+import todoImg from "../assets/todoimg.png"
+import campusconnectImg from "../assets/campusconnect.png"
 function Project(){
 
     const Projects=[
         {
             title:"Personal Finance Tracker",
+            img:financeImg,
             description:"A React application for tracking income and expenses with dashboards, charts and financial summaries.",
             features: [
             "Income tracking",
@@ -16,6 +20,7 @@ function Project(){
         },
         {
             title:"Todo Application",
+            img:todoImg,
             description: "A task management application with task creation, editing, deletion and filtering.",
             features: [
             "Add tasks",
@@ -28,6 +33,7 @@ function Project(){
         },
         {
             title:"Integrated Communication system",
+            img:campusconnectImg,
             description:"An MSc Computing dissertation project designed to improve communication between students and academic users.",
             features: [
             "Student communication",
@@ -44,8 +50,10 @@ function Project(){
             <h2>Projects</h2>
             <div style={{ marginLeft:"20px",gap:"30px",display:"flex",flexwrap:"wrap",marginTop:"20px"}}>
             {Projects.map((project)=>(
-                <div style={{border:"1px solid #ddd",borderRadius:"10px",padding:"20px",width:"300px" }}
+                <div style={{border:"1px solid #ddd",borderRadius:"10px",padding:"20px",width:"400px" }}
+                
                  key={project.title}>
+                    <img src={project.img} alt="project.title" style={{width:"100%",height:"220px"}}/>
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
                     
